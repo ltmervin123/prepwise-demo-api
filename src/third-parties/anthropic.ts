@@ -11,16 +11,20 @@ type MODELS =
   | `claude-3-7-sonnet-20250219`
   | `claude-3-5-haiku-20241022`
   | `claude-3-haiku-20240307`
-  | 'claude-sonnet-4-5-20250929';
+  | 'claude-sonnet-4-5-20250929'
+  | 'claude-haiku-4-5-20251001'
+  | 'claude-sonnet-4-6';
 
 export const MODEL_LIST = {
   CLAUDE_3_7_SONNET: 'claude-3-7-sonnet-20250219' as MODELS,
   CLAUDE_3_5_HAIKU: 'claude-3-5-haiku-20241022' as MODELS,
   CLAUDE_3_HAIKU: 'claude-3-haiku-20240307' as MODELS,
   CLAUDE_SONNET_4_5: 'claude-sonnet-4-5-20250929' as MODELS,
+  CLAUDE_HAIKU_4_5: 'claude-haiku-4-5-20251001' as MODELS,
+  CLAUDE_SONNET_4_6: 'claude-sonnet-4-6' as MODELS,
 };
 
-const DEFAULT_MODEL = 'claude-3-5-haiku-20241022';
+const DEFAULT_MODEL = MODEL_LIST.CLAUDE_HAIKU_4_5;
 const DEFAULT_MAX_TOKENS = 3000;
 const DEFAULT_TEMPERATURE = 0.8;
 
