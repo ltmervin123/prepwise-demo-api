@@ -35,10 +35,6 @@ const app: Application = express();
 const server = http.createServer(app);
 
 // Security middlewares
-// app.use(cors(CORS_OPTIONS));
-// app.use(express.json());
-// app.use(cookieParser());
-// app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
