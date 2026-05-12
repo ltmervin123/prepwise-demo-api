@@ -271,11 +271,10 @@ studentSchema.statics.signup = async function (
 ): Promise<HydratedDocument<StudentDocumentType>> {
   const existingStudent = await this.findOne({
     email: studentData.email,
-    studentId: studentData.studentId,
   }).lean();
 
   if (existingStudent) {
-    throw new ConflictError('The Email and Student ID provided is already registered.');
+    throw new ConflictError('The Email provided is already registered.');
   }
 
   const hashedPassword = await generateHash(studentData.password);
