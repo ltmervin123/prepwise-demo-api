@@ -88,7 +88,6 @@ studentSchema.statics.rejectStudent = async function (id: string): Promise<Stude
 studentSchema.statics.acceptStudent = async function (id: string): Promise<StudentDocumentType> {
   const acceptedStudent = await this.findByIdAndUpdate(id, {
     isStudentVerified: true,
-    acceptedAt: new Date(),
   });
 
   if (!acceptedStudent) {
@@ -333,10 +332,6 @@ studentSchema.statics.signin = async function (
 
   if (!student.isEmailVerified) {
     throw new UnauthorizedError('Email address is not verified.');
-  }
-
-  if (!student.isStudentVerified) {
-    throw new UnauthorizedError('Your account is not verified.');
   }
 
   if (!(await compareHash(password, student.password))) {

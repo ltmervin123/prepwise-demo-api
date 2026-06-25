@@ -4,14 +4,6 @@ export const payload = z.object({
   email: z
     .string()
     .email({ message: 'Invalid email address' })
-
-    .refine(
-      (email) => {
-        const domain = email.split('@')[1]?.toLowerCase();
-        return domain === 'normi.edu.ph';
-      },
-      { message: 'Email must be a @normi.edu.ph address' }
-    )
     .min(1, { message: 'Email is required' }),
 
   password: z

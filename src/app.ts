@@ -49,7 +49,7 @@ app.use(sanitizeRequest);
 app.use(`${BASE_API}/auth`, authRoutes);
 app.use(`${BASE_API}/interview`, interviewRoutes);
 app.use(`${BASE_API}/behavioral-questions`, behavioralQuestionRoutes);
-app.use(`${BASE_API}/admin`, adminRoutes);
+// app.use(`${BASE_API}/admin`, adminRoutes);
 
 // catch-all route for undefined routes
 app.use((req: Request, res: Response, next: NextFunction) => {

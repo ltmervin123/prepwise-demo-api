@@ -1,31 +1,33 @@
 export function generateVerificationEmailTemplate(firstName: string, link: string): string {
   return `<!DOCTYPE html>
           <html>
+
           <head>
-            <meta charset="UTF-8" />
-            <title>Email Verification</title>
+              <meta charset="UTF-8" />
+              <title>Email Verification</title>
           </head>
+
           <body style="font-family: Arial, sans-serif; background-color:#f5f7fa; margin:0; padding:0;">
-            <table align="center" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px; margin:auto; background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-              <tr>
-                <td style="padding:20px; text-align:center; background:#15803d ; color:#ffffff;">
-                  <h2 style="margin:0;">Verify Your Email</h2>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:30px; color:#333333;">
-                  <p>Hi <strong>${firstName}</strong>,</p>
-                  <p>Thank you for registering with <strong>PrepWise</strong>!</p>
-                  <p>Please verify your email by clicking the button below:</p>
-                  <p style="text-align:center; margin:30px 0;">
-                    <a href="${link}" style="background:#15803d ; color:#ffffff; padding:12px 24px; text-decoration:none; border-radius:6px; font-weight:bold;">Verify My Email</a>
-                  </p>
-                  <p>After verifying, your account will be reviewed by our admin team. You’ll receive an email once the review is complete.</p>
-                  <p style="margin-top:30px;">Thank you,<br>The <strong>PrepWise</strong> Team</p>
-                </td>
-              </tr>
-            </table>
-          </body>
+              <table align="center" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px; margin:auto; background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                  <tr>
+                      <td style="padding:20px; text-align:center;    background: linear-gradient(to right, #e76f03, #1e1e1e); ; color:#ffffff;">
+                          <h2 style="margin:0;">Verify Your Email</h2>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td style="padding:30px; color:#333333;">
+                          <p>Hi <strong>${firstName}</strong>,</p>
+                          <p>Thank you for registering with <strong>PrepWise</strong>!</p>
+                          <p>Please verify your email by clicking the button below:</p>
+                          <p style="text-align:center; margin:30px 0;">
+                              <a href="${link}" style="background:#e76f03 ; color:#ffffff; padding:12px 24px; text-decoration:none; border-radius:3px; font-weight:bold;">Verify My Email</a>
+                          </p>
+                          <p>Once email verification is complete, you can log in to your account.</p>
+                          <p style="margin-top:30px;">Thank you,<br>The <strong>PrepWise</strong> Team</p>
+                      </td>
+                  </tr>
+              </table>
+           </body>
           </html>
 `;
 }
