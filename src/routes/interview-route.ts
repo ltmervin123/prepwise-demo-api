@@ -4,7 +4,7 @@ import * as InterviewController from '../controllers/interview-controller';
 import * as InterviewValidator from '../middlewares/interview-validator';
 import { authCheckHandler, roleStudentCheck } from '../middlewares/auth-check-handler';
 import uploadResume from '../middlewares/multer';
-const router = Router();
+const router = Router() as Router;
 
 /**
  * @route POST /api/v1/interview/text-to-speech

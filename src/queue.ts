@@ -8,7 +8,7 @@ class QueueService {
 
   private constructor(queueName: string) {
     this.queue = new Queue(queueName, {
-      connection: RedisConnection.getInstance().getConnection(),
+      connection: RedisConnection.getInstance().getConnection() as any,
       defaultJobOptions: {
         attempts: 10,
         backoff: { type: 'exponential', delay: 10000 },

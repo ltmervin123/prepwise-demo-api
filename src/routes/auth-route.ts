@@ -5,7 +5,8 @@ import * as AuthValidator from '../middlewares/auth-validator';
 import { authCheckHandler, roleAdminCheck } from '../middlewares/auth-check-handler';
 import { updateAdminEmail } from '../controllers/admin-controller';
 import { updatePassword } from '../controllers/auth-controller';
-const router = Router();
+
+const router = Router() as Router;
 
 /**
  * @route POST /api/v1/auth/update-admin-email

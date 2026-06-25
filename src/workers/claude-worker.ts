@@ -23,7 +23,7 @@ const claudeWorker = new Worker(
     }
   },
   {
-    connection: RedisConnection.getInstance().getConnection(),
+    connection: RedisConnection.getInstance().getConnection() as any,
     autorun: true,
     concurrency: 3,
   }

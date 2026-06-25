@@ -8,7 +8,7 @@ import {
   validateUpdateBehavioralQuestion,
 } from '../middlewares/behavioral-question-validator';
 import { validateInterviewIdParam } from '../middlewares/interview-validator';
-const router = Router();
+const router = Router() as Router;
 
 /**
  * @route GET /api/v1/admin/dashboard-stats

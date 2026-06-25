@@ -3,7 +3,7 @@ import { globalRateLimiter } from '../configs/rate-limit-config';
 import { authCheckHandler, roleStudentCheck } from '../middlewares/auth-check-handler';
 import * as BehavioralQuestionController from '../controllers/behavioral-question-controller';
 import * as BehavioralQuestionValidator from '../middlewares/behavioral-question-validator';
-const router = Router();
+const router = Router() as Router;
 
 /**
  * @route GET /api/v1/behavioral-questions/
